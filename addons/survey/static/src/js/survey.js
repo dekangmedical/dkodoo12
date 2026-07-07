@@ -164,7 +164,7 @@ if(!the_form.length) {
                 return false;
             }
         },
-        timeout: 5000,
+        timeout: 50000,
         error: function(jqXHR, textStatus, errorThrown){ // failure of AJAX request
             $('#AJAXErrorModal').modal('show');
         }

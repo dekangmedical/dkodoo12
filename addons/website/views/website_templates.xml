@@ -301,6 +301,7 @@
         <a href="/" class="navbar-brand logo">
             <span t-field="res_company.logo" t-options="{'widget': 'image'}" role="img" t-att-aria-label="'Logo of %s' % res_company.name" t-att-title="res_company.name" />
         </a>
+                        <t t-call="website.language_selector"/>
     </xpath>
 </template>
 
@@ -1231,6 +1232,12 @@ Sitemap: <t t-esc="url_root"/>sitemap.xml
             <a class="fa fa-trash js_delete_page" t-att-data-id="page.id" href="#" title="Delete this page"/>
         </td>
     </tr>
+</template>
+
+<template id="layout_id" inherit_id="website.layout" name="layout name" priority="17">
+	<xpath expr="//head//link" position="after">
+		<link rel="shortcut icon" href="/web/static/src/img/favicon.ico" type="image/x-icon"/>
+	</xpath>
 </template>
 
 </odoo>
